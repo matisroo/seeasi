@@ -10,8 +10,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -39,7 +37,7 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
         }
 
     }
-          */
+     */
     /**
      * Creates new form CSVTeatudliitminejalahutamine
      *
@@ -212,8 +210,8 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
                 while ((line = br.readLine()) != null) {
 
                     String[] mass = line.split(cvsSplitBy);
-                    String awn0 = mass[0].replaceAll("[^0-9.]", "");
-                    String awn1 = mass[1].replaceAll("[^0-9.]", "");
+                    String awn0 = mass[0].replaceAll("[^0-9.]", ""); //Tuleb ainult välja anda 'row'i milles on kõik 3 numbrid (n: 321), 
+                    String awn1 = mass[1].replaceAll("[^0-9.]", ""); //kui on segu siis ei sobi (n: a42 või 5e2)
                     String awn2 = mass[2].replaceAll("[^0-9.]", "");
                     String awn3 = mass[3].replaceAll("[^0-9.]", "");
                     String awn4 = mass[4].replaceAll("[^0-9.]", "");
@@ -225,6 +223,12 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
                     String awn10 = mass[10].replaceAll("[^0-9.]", "");
                     String awn11 = mass[11].replaceAll("[^0-9.]", "");
 
+                   // try {
+                   //     Integer.parseInt(awn0);
+                   // } catch (NumberFormatException e) {
+                   //     // Error
+                   // }
+                    
                     if (jRadioButton1.isSelected()) {
                         taResult.append(awn0 + " ; " + awn1 + " ; " + awn2 + " ; " + awn3 + " ; " + awn4 + " ; " + awn5 + " ; " + awn6
                                 + " ; " + awn7 + " ; " + awn8 + " ; " + awn9 + " ; " + awn10 + " ; " + awn11 + "\n");
@@ -260,55 +264,55 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnButton1ActionPerformed
 
-     /**
-      * @param args the command line arguments
-      */
-     public static void main(String args[]) throws IOException {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) throws IOException {
 
-         /* Set the Nimbus look and feel */
-         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-          */
-         try {
-             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                 if ("Nimbus".equals(info.getName())) {
-                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                     break;
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
 
-                 }
-             }
-         } catch (ClassNotFoundException ex) {
-             java.util.logging.Logger.getLogger(CSVnullarvudeliitmine.class
-                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(CSVnullarvudeliitmine.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-         } catch (InstantiationException ex) {
-             java.util.logging.Logger.getLogger(CSVnullarvudeliitmine.class
-                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(CSVnullarvudeliitmine.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-         } catch (IllegalAccessException ex) {
-             java.util.logging.Logger.getLogger(CSVnullarvudeliitmine.class
-                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(CSVnullarvudeliitmine.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-             java.util.logging.Logger.getLogger(CSVnullarvudeliitmine.class
-                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-         }
-         //</editor-fold>
-         //</editor-fold>
-         /* Create and display the form */
-         java.awt.EventQueue.invokeLater(new Runnable() {
-             public void run() {
-                 try {
-                     new CSVnullarvudeliitmine().setVisible(true);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(CSVnullarvudeliitmine.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    new CSVnullarvudeliitmine().setVisible(true);
 
-                 } catch (FileNotFoundException ex) {
-                     Logger.getLogger(CSVnullarvudeliitmine.class
-                             .getName()).log(Level.SEVERE, null, ex);
-                 }
-             }
-         });
-     }
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(CSVnullarvudeliitmine.class
+                            .getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnButton1;
