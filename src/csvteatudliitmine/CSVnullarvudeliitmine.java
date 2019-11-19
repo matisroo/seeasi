@@ -112,7 +112,7 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
             }
         });
 
-        btnButton1.setText("Näita");
+        btnButton1.setText("Näita Originaalsed Faili");
         btnButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnButton1ActionPerformed(evt);
@@ -226,6 +226,7 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
         if (jRadioButton1.isSelected()) {
             int sum = 0;
             int count = 0;
+            boolean emptyRow = false;
             for (int i = 0; i < fileContents.size(); i++) {
                 String[] parts = fileContents.get(i).split(";");
                 for (int j = 0; j < parts.length; j++) {
@@ -235,13 +236,15 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
                             taResult.append(parts[j] + " ");
                             sum += s;
                             count += 1;
+                            emptyRow = true;
                         }
                     }
-                    if (j == parts.length - 1) {
+                    if (emptyRow && j == parts.length - 1) {
+                        emptyRow = false;
                         taResult.append("\n");
                     }
                 }
-
+ 
             }
 
             taFinalResult.append("Paaris arvude lõpptulemus -> " + sum + "\n");
@@ -255,6 +258,7 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
         } else if (jRadioButton2.isSelected()) {
             int sum1 = 0;
             int count1 = 0;
+            boolean emptyRow = false;
             for (int i = 0; i < fileContents.size(); i++) {
                 String[] parts1 = fileContents.get(i).split(";");
                 for (int j = 0; j < parts1.length; j++) {
@@ -264,9 +268,11 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
                             taResult.append(parts1[j] + " ");
                             sum1 += s1;
                             count1 += 1;
+                            emptyRow = true;
                         }
                     }
-                    if (j == parts1.length - 1) {
+                    if (emptyRow && j == parts1.length - 1) {
+                        emptyRow = false;
                         taResult.append("\n");
                     }
                 }
@@ -277,6 +283,7 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
         } else if (jRadioButton3.isSelected()) {
             int sum2 = 0;
             int count2 = 0;
+            boolean emptyRow = false;
             for (int i = 0; i < fileContents.size(); i++) {
                 String[] parts2 = fileContents.get(i).split(";");
                 for (int j = 0; j < parts2.length; j++) {
@@ -286,9 +293,11 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
                             taResult.append(parts2[j] + " ");
                             sum2 += s2;
                             count2 += 1;
+                            emptyRow = true;
                         }
                     }
-                    if (j == parts2.length - 1) {
+                    if (emptyRow && j == parts2.length - 1) {
+                        emptyRow = false;
                         taResult.append("\n");
                     }
                 }
@@ -299,19 +308,24 @@ public class CSVnullarvudeliitmine extends javax.swing.JFrame {
         } else if (jRadioButton4.isSelected()) {
             int sum3 = 0;
             int count3 = 0;
+            boolean emptyRow = false;
             for (int i = 0; i < fileContents.size(); i++) {
                 String[] parts3 = fileContents.get(i).split(";");
                 for (int j = 0; j < parts3.length; j++) {
                     if (isNumeric(parts3[j])) {
                         int s3 = Integer.parseInt(parts3[j]);
                         if ((s3 % 10) == 0) {
+                            System.out.println(parts3[j]);
                             taResult.append(parts3[j] + " ");
                             sum3 += s3;
                             count3 += 1;
+                            emptyRow = true;
                         }
                     }
-                    if (j == parts3.length - 1) {
+                    if (emptyRow && j == parts3.length - 1) {
+                        emptyRow = false;
                         taResult.append("\n");
+
                     }
                 }
             }

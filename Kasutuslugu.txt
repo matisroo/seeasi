@@ -1,0 +1,21 @@
+
+See on kasutuslugu 17.10.2019 töö jaoks
+Ülesanne 4. 
+
+	Kirjeldus,
+		Paarisarvude või paarituarvude või 5-lõppevaid või 0-lõppevaid arvude kokkuliitmine.
+		
+	Käsutaja,
+		See inimene kellel on programm olemas.
+		
+	Sündmuste jada,
+		1. Programmi avamine ja käivitumine.
+		2. Faili esimesse TextArea'sse printimine
+		3. Radiobuttonitega valiku tegema et missuguseid arve kokku liita.
+		4. "Filtreeri" nuppu peale vajutamine et lõpptulemused saada.
+		
+	Eeltingimused,
+		1. Fail on õiges kohas
+	
+	Järeltingimused,
+		On võimalik CSV failist välja arvutada ja kokku liita kõik paaris või paaritu või 5-lõppevaid või 0-lõppevaid arve.

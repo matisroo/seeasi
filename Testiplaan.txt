@@ -1,0 +1,67 @@
+
+See Testiplaan on mõeldud 17.10.2019 töö jaoks.
+Ülesanne 4.
+
+
+	1. Dokumenti eesmark on olla Testiplaan
+	
+	2. Projekti ulatus on teatud CSV faili filtreerida ja tulemused kokku liita.
+		Tulemused peavad olema näidatud Radiobutton'itega erinevate olukordate jaoks, et näiteks filtreeridud numbrid tohivad ainult olla 5-lõpulised või paarituarvud.
+		Kui on kõik asjad filtreeridud siis on vaja need numbrid kokku liita ja lõpptulemus välja näidata.
+		
+	3. Testitavad objektid on CSVfail.
+	
+	4. Testimise meetodid on,
+		TextArea's faili filteerimine ja radiobuttonitega teisi tulemusi filtreerida.
+		Kui see on tehtud liitakse kõik kokku ja lõpptulemus läheb teise TextArea'sse.
+		
+	5. 190KB kõvaketta või RAM'is olevad ruumi. 
+	
+	6. Peamised Testivate nõuded on,
+		1) Kui miski läheb katki, siis leida põhjus ja selle korda teha
+		2) Kui miski ei lähe katki, välja arvata miks midagi katki ei läinud ja kuidas seda anomaaliat edasi kasutada.
+		3) Leida viise kuidas koodi lihtsamaks teha.
+	
+	7. Testimise põhjalikkus on piisavalt hea olnud. Kui keegi ei tee koodi katki siis töötab kõik jätkuvalt hästi.
+		Testimise ajal ei olnud leida anomaaliat mis teeks midagi katki. 
+		
+	8. N/A
+	
+	9. N/A
+	
+	10. Testimise katkestamise ja taasalustamise peamised tingimused,
+		1) Kui koodi tegemine liikus täiesti valele teele.
+		2) Kui koodi ei ole võimalik parandata või sellest ei ole midagi aru teisele inimesele.
+		3) Kui on vaja massiivseid muudatusi teha.
+		
+	11. Vigade halduse ja parandamise protseduur,
+		1) Leida vigu,
+		2) Leida põhjus miks see viga eksisteerib ja mis seda põhjustab
+		3) Parandata selle vea ära ja leida võimalusi vältida rohkem vigade tulemist.
+		
+	12. Üleantavad tulemused,
+		See programm töötab, kuid sellele saaks muudatusi teha. Näiteks tühjade kohtade eemaldumist enne kui lõpptulemuste saamine.
+		On võimalik seda koodi muuta niiviisi et seda on lihtsam lugeda kui ka programmi sisesed documentatsiooni anda.
+		
+	13. Et selle programmiga on võimalik 5-lõppuliseid või 0-lõppuliseid või paaris- või paarituarvud kokku liita.
+	
+	14. Java 8,  Netbeans IDE 8.2
+	
+	15. N/A
+	
+	16. 398 rida Netbeans IDE's
+	
+	17. MA saada või mitte. 
+	
+	18. N/A
+	
+	19. Mina
+	
+	
+	
+	
+	
+	
+	
+	
+	
